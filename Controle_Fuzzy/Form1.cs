@@ -13,6 +13,9 @@ namespace Controle_Fuzzy
 {
     public partial class Form1 : Form
     {
+
+        String A0;
+
         public Form1()
         {
             InitializeComponent();
@@ -111,7 +114,11 @@ namespace Controle_Fuzzy
 
         private void btIniciar_Click(object sender, EventArgs e)
         {
-
+            Random rnd = new Random();
+            for(int i = 0; i < 100; i++)
+            {
+                chart1.Series[0].Points.AddXY(i, 32 * rnd.NextDouble());
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -158,5 +165,7 @@ namespace Controle_Fuzzy
         {
 
         }
+
+
     }
 }
