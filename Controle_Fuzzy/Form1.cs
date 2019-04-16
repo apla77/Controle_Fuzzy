@@ -85,7 +85,6 @@ namespace Controle_Fuzzy
             }
             else
             {
-
                 try
                 {
                     serialPort1.Close();
@@ -96,7 +95,6 @@ namespace Controle_Fuzzy
                 {
                     return;
                 }
-
             }
         }
 
@@ -112,6 +110,51 @@ namespace Controle_Fuzzy
         }
 
         private void btIniciar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbNivel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            lbBomba.Text = hScrollBar1.Value.ToString() + " %";
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbBomba_Click(object sender, EventArgs e)
         {
 
         }

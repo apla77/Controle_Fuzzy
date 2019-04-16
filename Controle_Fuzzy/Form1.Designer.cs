@@ -49,7 +49,7 @@
             // 
             // btConectar
             // 
-            this.btConectar.Location = new System.Drawing.Point(622, 97);
+            this.btConectar.Location = new System.Drawing.Point(677, 43);
             this.btConectar.Name = "btConectar";
             this.btConectar.Size = new System.Drawing.Size(75, 23);
             this.btConectar.TabIndex = 0;
@@ -60,54 +60,60 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(470, 100);
+            this.comboBox1.Location = new System.Drawing.Point(523, 45);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(107, 21);
+            this.comboBox1.Size = new System.Drawing.Size(130, 21);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(396, 106);
+            this.label1.Location = new System.Drawing.Point(427, 51);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Portas";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(396, 161);
+            this.label2.Location = new System.Drawing.Point(427, 106);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nivel";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(394, 223);
+            this.label3.Location = new System.Drawing.Point(425, 168);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Bomba";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // hScrollBar1
             // 
-            this.hScrollBar1.Location = new System.Drawing.Point(470, 223);
+            this.hScrollBar1.Location = new System.Drawing.Point(501, 168);
+            this.hScrollBar1.Maximum = 200;
             this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(200, 21);
+            this.hScrollBar1.Size = new System.Drawing.Size(251, 21);
             this.hScrollBar1.TabIndex = 5;
+            this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar1_Scroll);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rbManual);
             this.groupBox1.Controls.Add(this.rbAutomatico);
-            this.groupBox1.Location = new System.Drawing.Point(398, 297);
+            this.groupBox1.Location = new System.Drawing.Point(429, 242);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -115,6 +121,7 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funcionamento da bomba";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // rbManual
             // 
@@ -143,22 +150,24 @@
             // lbBomba
             // 
             this.lbBomba.AutoSize = true;
-            this.lbBomba.Location = new System.Drawing.Point(705, 227);
+            this.lbBomba.Location = new System.Drawing.Point(769, 176);
             this.lbBomba.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbBomba.Name = "lbBomba";
-            this.lbBomba.Size = new System.Drawing.Size(27, 13);
+            this.lbBomba.Size = new System.Drawing.Size(24, 13);
             this.lbBomba.TabIndex = 7;
-            this.lbBomba.Text = "30%";
+            this.lbBomba.Text = "0 %";
+            this.lbBomba.Click += new System.EventHandler(this.lbBomba_Click);
             // 
             // lbNivel
             // 
             this.lbNivel.AutoSize = true;
-            this.lbNivel.Location = new System.Drawing.Point(467, 161);
+            this.lbNivel.Location = new System.Drawing.Point(498, 106);
             this.lbNivel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbNivel.Name = "lbNivel";
-            this.lbNivel.Size = new System.Drawing.Size(33, 13);
+            this.lbNivel.Size = new System.Drawing.Size(36, 13);
             this.lbNivel.TabIndex = 8;
-            this.lbNivel.Text = "30cm";
+            this.lbNivel.Text = "30 cm";
+            this.lbNivel.Click += new System.EventHandler(this.lbNivel_Click);
             // 
             // btIniciar
             // 
@@ -188,7 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(825, 495);
+            this.ClientSize = new System.Drawing.Size(820, 427);
             this.Controls.Add(this.btSalvar);
             this.Controls.Add(this.btIniciar);
             this.Controls.Add(this.lbNivel);
@@ -202,6 +211,7 @@
             this.Controls.Add(this.btConectar);
             this.Name = "Form1";
             this.Text = "Controle Fuzzy";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
