@@ -117,7 +117,8 @@ namespace Controle_Fuzzy
             Random rnd = new Random();
             for(int i = 0; i < 100; i++)
             {
-                chart1.Series[0].Points.AddXY(i, 32 * rnd.NextDouble());
+                chart2.Series[0].Points.AddXY(i, 32 * rnd.NextDouble());
+
             }
         }
 
@@ -146,11 +147,6 @@ namespace Controle_Fuzzy
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
             lbBomba.Text = hScrollBar1.Value.ToString() + " %";
@@ -166,6 +162,22 @@ namespace Controle_Fuzzy
 
         }
 
+        private void chart2_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            A0 = serialPort1.ReadLine();             //le o dado disponível na serial
+            this.Invoke(new EventHandler(trataDadoRecebido));   //chama outra thread para escrever o dado no text box
+        }
+
+        private void trataDadoRecebido(object sender, EventArgs e)
+        {
+            //  Double tensao = Convert.ToDouble(A0) * 5 / 1023;
+            // lbNivel.Text = "Tensão: " + Convert.ToString(Math.Round(tensao, 1)) + " V";
+            lbNivel.Text = A0;
+        }
     }
 }

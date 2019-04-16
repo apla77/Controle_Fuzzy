@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btConectar = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,10 +57,9 @@
             // 
             // btConectar
             // 
-            this.btConectar.Location = new System.Drawing.Point(1082, 62);
-            this.btConectar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btConectar.Location = new System.Drawing.Point(812, 50);
             this.btConectar.Name = "btConectar";
-            this.btConectar.Size = new System.Drawing.Size(100, 28);
+            this.btConectar.Size = new System.Drawing.Size(75, 23);
             this.btConectar.TabIndex = 0;
             this.btConectar.Text = "Conectar";
             this.btConectar.UseVisualStyleBackColor = true;
@@ -69,19 +68,20 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(876, 64);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Location = new System.Drawing.Point(657, 52);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(172, 24);
+            this.comboBox1.Size = new System.Drawing.Size(130, 21);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(748, 72);
+            this.label1.Location = new System.Drawing.Point(561, 58);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 17);
+            this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Portas";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -89,9 +89,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(748, 139);
+            this.label2.Location = new System.Drawing.Point(561, 113);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 17);
+            this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nivel";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -99,19 +100,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(746, 216);
+            this.label3.Location = new System.Drawing.Point(560, 176);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 17);
+            this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Bomba";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // hScrollBar1
             // 
-            this.hScrollBar1.Location = new System.Drawing.Point(846, 222);
+            this.hScrollBar1.Location = new System.Drawing.Point(635, 176);
             this.hScrollBar1.Maximum = 109;
             this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(335, 21);
+            this.hScrollBar1.Size = new System.Drawing.Size(251, 21);
             this.hScrollBar1.TabIndex = 5;
             this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar1_Scroll);
             // 
@@ -119,11 +120,11 @@
             // 
             this.groupBox1.Controls.Add(this.rbManual);
             this.groupBox1.Controls.Add(this.rbAutomatico);
-            this.groupBox1.Location = new System.Drawing.Point(751, 311);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(563, 253);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(280, 150);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(210, 122);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funcionamento da bomba";
@@ -132,10 +133,10 @@
             // rbManual
             // 
             this.rbManual.AutoSize = true;
-            this.rbManual.Location = new System.Drawing.Point(24, 92);
-            this.rbManual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbManual.Location = new System.Drawing.Point(18, 75);
+            this.rbManual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbManual.Name = "rbManual";
-            this.rbManual.Size = new System.Drawing.Size(75, 21);
+            this.rbManual.Size = new System.Drawing.Size(60, 17);
             this.rbManual.TabIndex = 1;
             this.rbManual.TabStop = true;
             this.rbManual.Text = "Manual";
@@ -144,10 +145,10 @@
             // rbAutomatico
             // 
             this.rbAutomatico.AutoSize = true;
-            this.rbAutomatico.Location = new System.Drawing.Point(24, 41);
-            this.rbAutomatico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbAutomatico.Location = new System.Drawing.Point(18, 33);
+            this.rbAutomatico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbAutomatico.Name = "rbAutomatico";
-            this.rbAutomatico.Size = new System.Drawing.Size(99, 21);
+            this.rbAutomatico.Size = new System.Drawing.Size(78, 17);
             this.rbAutomatico.TabIndex = 0;
             this.rbAutomatico.TabStop = true;
             this.rbAutomatico.Text = "Automatico";
@@ -156,9 +157,10 @@
             // lbBomba
             // 
             this.lbBomba.AutoSize = true;
-            this.lbBomba.Location = new System.Drawing.Point(1204, 226);
+            this.lbBomba.Location = new System.Drawing.Point(903, 184);
+            this.lbBomba.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbBomba.Name = "lbBomba";
-            this.lbBomba.Size = new System.Drawing.Size(32, 17);
+            this.lbBomba.Size = new System.Drawing.Size(24, 13);
             this.lbBomba.TabIndex = 7;
             this.lbBomba.Text = "0 %";
             this.lbBomba.Click += new System.EventHandler(this.lbBomba_Click);
@@ -166,19 +168,19 @@
             // lbNivel
             // 
             this.lbNivel.AutoSize = true;
-            this.lbNivel.Location = new System.Drawing.Point(843, 139);
+            this.lbNivel.Location = new System.Drawing.Point(632, 113);
+            this.lbNivel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbNivel.Name = "lbNivel";
-            this.lbNivel.Size = new System.Drawing.Size(46, 17);
+            this.lbNivel.Size = new System.Drawing.Size(36, 13);
             this.lbNivel.TabIndex = 8;
             this.lbNivel.Text = "30 cm";
             this.lbNivel.Click += new System.EventHandler(this.lbNivel_Click);
             // 
             // btIniciar
             // 
-            this.btIniciar.Location = new System.Drawing.Point(129, 584);
-            this.btIniciar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btIniciar.Location = new System.Drawing.Point(97, 474);
             this.btIniciar.Name = "btIniciar";
-            this.btIniciar.Size = new System.Drawing.Size(100, 28);
+            this.btIniciar.Size = new System.Drawing.Size(75, 23);
             this.btIniciar.TabIndex = 9;
             this.btIniciar.Text = "Iniciar";
             this.btIniciar.UseVisualStyleBackColor = true;
@@ -186,10 +188,9 @@
             // 
             // btSalvar
             // 
-            this.btSalvar.Location = new System.Drawing.Point(388, 584);
-            this.btSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSalvar.Location = new System.Drawing.Point(291, 474);
             this.btSalvar.Name = "btSalvar";
-            this.btSalvar.Size = new System.Drawing.Size(100, 28);
+            this.btSalvar.Size = new System.Drawing.Size(75, 23);
             this.btSalvar.TabIndex = 10;
             this.btSalvar.Text = "Salvar";
             this.btSalvar.UseVisualStyleBackColor = true;
@@ -201,40 +202,43 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Location = new System.Drawing.Point(40, 12);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            this.chart1.Location = new System.Drawing.Point(30, 10);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart1.Name = "chart1";
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(609, 265);
+            series3.BorderWidth = 3;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
+            this.chart1.Size = new System.Drawing.Size(457, 215);
             this.chart1.TabIndex = 11;
             this.chart1.Text = "chart1";
             // 
             // chart2
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            this.chart2.Location = new System.Drawing.Point(40, 298);
+            chartArea4.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea4);
+            this.chart2.Location = new System.Drawing.Point(30, 242);
+            this.chart2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart2.Name = "chart2";
-            series2.BorderWidth = 3;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(609, 265);
+            series4.BorderWidth = 3;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            series4.Name = "Series1";
+            this.chart2.Series.Add(series4);
+            this.chart2.Size = new System.Drawing.Size(457, 215);
             this.chart2.TabIndex = 12;
             this.chart2.Text = "chart2";
+            this.chart2.Click += new System.EventHandler(this.chart2_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1304, 625);
+            this.ClientSize = new System.Drawing.Size(978, 508);
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.btSalvar);
@@ -248,7 +252,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btConectar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Controle Fuzzy";
             this.Load += new System.EventHandler(this.Form1_Load);
