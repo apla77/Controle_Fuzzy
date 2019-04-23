@@ -13,10 +13,16 @@ namespace Controle_Fuzzy
 {
     public partial class Form1 : Form
     {
+        String RxString;
+        int motor;
+        Double num = -1;
+
         public Form1()
         {
             InitializeComponent();
             timerCOM.Enabled = true;
+            if(num >= 0)
+                timerLeitura.Enabled = true;
         }
 
         private void atualizaListaCOMs()
@@ -109,11 +115,6 @@ namespace Controle_Fuzzy
             atualizaListaCOMs();
         }
 
-        private void btIniciar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -147,6 +148,7 @@ namespace Controle_Fuzzy
         private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
             lbBomba.Text = hScrollBar1.Value.ToString() + " %";
+            motor = (int)hScrollBar1.Value;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -157,6 +159,43 @@ namespace Controle_Fuzzy
         private void lbBomba_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e) {
+
+            RxString = serialPort1.ReadExisting();              //le o dado disponível na serial
+            this.Invoke(new EventHandler(trataDadoRecebido));   //chama outra thread para escrever o dado no text box
+        }
+
+        private void trataDadoRecebido(object sender, EventArgs e) {
+            lbNivel.Text = "";
+            lbNivel.Text = RxString + " cm";
+            plotarSensor();
+
+        }
+
+        private void plotarSensor()
+        {
+            num = Double.Parse(RxString);
+            chrtNivel.Series[0].Points.AddY(num);
+        }
+
+        private void plotarBomba()
+        {
+            Double num2 = Double.Parse(RxString);
+            chartMotor.Series[0].Points.AddY(num2);
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e) {
+            if (serialPort1.IsOpen) {
+                serialPort1.Write(lbBomba.Text);
+            }
+        }
+
+        private void timerLeitura_Tick(object sender, EventArgs e) {
+            plotarSensor();
+            plotarBomba();
         }
     }
 }
