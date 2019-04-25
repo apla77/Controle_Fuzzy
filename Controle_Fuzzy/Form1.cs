@@ -138,7 +138,7 @@ namespace Controle_Fuzzy
         private void lbBomba_Click(object sender, EventArgs e) {
 
         }
-
+         
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e) {
 
@@ -162,9 +162,7 @@ namespace Controle_Fuzzy
             else
             {
                 serialFirstRead = false;
-            }
-                
-
+            }      
         }
 
         private void plotarBomba() {
