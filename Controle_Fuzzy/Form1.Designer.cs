@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btConectar = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.hscBomba = new System.Windows.Forms.HScrollBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbManual = new System.Windows.Forms.RadioButton();
             this.rbAutomatico = new System.Windows.Forms.RadioButton();
@@ -62,7 +62,7 @@
             // 
             this.btConectar.Location = new System.Drawing.Point(772, 39);
             this.btConectar.Name = "btConectar";
-            this.btConectar.Size = new System.Drawing.Size(75, 23);
+            this.btConectar.Size = new System.Drawing.Size(98, 23);
             this.btConectar.TabIndex = 0;
             this.btConectar.Text = "Conectar";
             this.btConectar.UseVisualStyleBackColor = true;
@@ -100,14 +100,14 @@
             this.label3.Text = "Bomba";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // hScrollBar1
+            // hscBomba
             // 
-            this.hScrollBar1.Location = new System.Drawing.Point(619, 162);
-            this.hScrollBar1.Maximum = 255;
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(251, 21);
-            this.hScrollBar1.TabIndex = 5;
-            this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar1_Scroll);
+            this.hscBomba.Location = new System.Drawing.Point(619, 162);
+            this.hscBomba.Maximum = 109;
+            this.hscBomba.Name = "hscBomba";
+            this.hscBomba.Size = new System.Drawing.Size(251, 21);
+            this.hscBomba.TabIndex = 5;
+            this.hscBomba.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar1_Scroll);
             // 
             // groupBox1
             // 
@@ -189,19 +189,19 @@
             // 
             // chrtNivel
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chrtNivel.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chrtNivel.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chrtNivel.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chrtNivel.Legends.Add(legend1);
             this.chrtNivel.Location = new System.Drawing.Point(12, 12);
             this.chrtNivel.Name = "chrtNivel";
-            series3.BorderWidth = 2;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Legend = "Legend1";
-            series3.LegendText = "Nível";
-            series3.Name = "Series1";
-            this.chrtNivel.Series.Add(series3);
+            series1.BorderWidth = 2;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.LegendText = "Nível";
+            series1.Name = "Series1";
+            this.chrtNivel.Series.Add(series1);
             this.chrtNivel.Size = new System.Drawing.Size(515, 253);
             this.chrtNivel.TabIndex = 11;
             this.chrtNivel.Text = "chart1";
@@ -232,19 +232,19 @@
             // 
             // chartMotor
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartMotor.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartMotor.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            this.chartMotor.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartMotor.Legends.Add(legend2);
             this.chartMotor.Location = new System.Drawing.Point(12, 291);
             this.chartMotor.Name = "chartMotor";
-            series4.BorderWidth = 2;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Legend = "Legend1";
-            series4.LegendText = "Nível";
-            series4.Name = "Series1";
-            this.chartMotor.Series.Add(series4);
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.LegendText = "Nível";
+            series2.Name = "Series1";
+            this.chartMotor.Series.Add(series2);
             this.chartMotor.Size = new System.Drawing.Size(515, 255);
             this.chartMotor.TabIndex = 14;
             this.chartMotor.Text = "chart1";
@@ -262,13 +262,14 @@
             this.Controls.Add(this.lbNivel);
             this.Controls.Add(this.lbBomba);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.hScrollBar1);
+            this.Controls.Add(this.hscBomba);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btConectar);
             this.Name = "Form1";
             this.Text = "Controle Fuzzy";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -285,7 +286,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.HScrollBar hScrollBar1;
+        private System.Windows.Forms.HScrollBar hscBomba;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbManual;
         private System.Windows.Forms.RadioButton rbAutomatico;
@@ -299,6 +300,9 @@
         private System.Windows.Forms.Timer timerLeitura;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartMotor;
+
+        const string BOMB_OFF = "-1";
+        bool serialFirstRead = false;
     }
 }
 
